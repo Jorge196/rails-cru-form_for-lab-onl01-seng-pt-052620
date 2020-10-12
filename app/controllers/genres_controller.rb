@@ -22,7 +22,13 @@ class GenresController < ApplicationController
   end
 
   def update
-    
+    @genre = Genre.find_by_id(params[:id])
+    if @genre.update(genre_params)
+      redirect_to genre_path(@genre)
+    else
+      render :new
+    end
+  end 
 
   private
 
