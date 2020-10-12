@@ -17,6 +17,9 @@ class GenresController < ApplicationController
     end
   end
 
+  def edit
+  end 
+
   private
 
   def genre_params
